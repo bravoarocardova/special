@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birtday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio autoplay loop id="audio2">
+    <source src="cie_hbd/Happy-birthday-instrumental.mp3" type="audio/mp3">
+</audio>
+<script>
+    const audio = document.getElementById("audio2");
+    document.addEventListener("click",function(){
+        audio.play();
+    })
+</script>
+  <div id="book">
+  
+  <input type="checkbox" id="five">
+  <div id="page5" class="page">
+    <div class="front">
+      Maaf ya selalu buat kamu marah🙏, kamu kalo marah😠 gemesin jadi pengen cubit ginjalnya 🤏😌, tapi lebih gemesin kalo senyum🙂😗, aku harap marah dan kesalnya bakal berkurang kedepannya ya semoga aja sih😎. 
+    </div>
+    <div class="back">
+      My Book
+    </div>
+    <label for="five"></label>
+  </div>
+  
+  <input type="checkbox" id="four">
+  <div id="page4" class="page">
+    <div class="front">
+      Semoga menjadi orang yang lebih baik dari yang sebelumnya 🥳🎂, panjang umur, sehat selalu dan cita-citanya tercapai dan impiannya 🌠 menjadi kenyataan🤲🤲
+    </div>
+    <div class="back">
+      <img src="img/4.jpg" >
+    </div>
+    <label for="four"></label>
+  </div>
+  
+  <input type="checkbox" id="three">
+  <div id="page3" class="page">
+    <div class="front">
+      Selamat ulang tahun 🥳🥳🎂🥳 untuk orang yang spesial!🌠
+    </div>
+    <div class="back">
+      <img src="img/3.jpg" >
+    </div>
+    <label for="three"></label>
+  </div>
+  
+  <input type="checkbox" id="two">
+  <div id="page2" class="page">
+    <div class="front">
+      🎆 🌠 Hari ini adalah hari spesial untuk orang yang spesial.🎆
+      <!-- Selamat Ulang tahun🥳🥳🎂🥳.Semoga panjang umur, sehat selalu dan cita-citanya tercapai. Note: MARAH NYA KURANGIN😑 -->
+      
+    </div>
+    <div class="back">
+      <img src="img/2.jpg" >
+    </div>
+    <label for="two"></label>
+  </div>
+  
+  <input type="checkbox" id="one">
+  <div id="page1" class="page">
+    <div class="front">My Book</div>
+    <div class="back">
+      <img src="img/1.jpg" >
+    </div>
+    <label for="one"></label>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

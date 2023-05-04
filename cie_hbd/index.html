@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Birthday</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #99aaaa;
+            margin:0;
+            padding:0;
+            background: url("background.jpg") ;
+            font-family: 'Baloo Bhaijaan',Arial, Helvetica, sans-serif;
+        }
+        .container{
+            height: 620px;
+            width: 500px;
+            /* border:2px solid white; */
+            position:absolute;
+            margin: 20px auto auto auto;
+            top: 50px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .cake-container{
+            height: 100%;
+            width: 300px;
+            /* border:2px solid white; */
+            position:absolute;
+            margin:auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .cake{
+            height: 70px;
+            width: 180px;
+            background-color: deepskyblue;
+            position: absolute;
+        }
+        .c1{
+            bottom: 0;
+            left: 60px;
+        }
+        .cream{
+            background-color: saddlebrown;
+            height: 10px;
+            width: 100%;
+            position:absolute;
+            top:30px;
+        }
+        .icing{
+            position: relative;
+        }
+        .icing div{
+            background-color: #fbd028;
+            height: 12.5px;
+            width: 26px;
+            border-radius: 0 0 26px 26px;
+            position: absolute;
+        }
+
+        .icing div:nth-child(1){
+            left: -2px;
+        }
+
+        .icing div:nth-child(2){
+            left: 26px;
+        }
+        .icing div:nth-child(3){
+            left: 52px;
+        }
+        .icing div:nth-child(4){
+            left: 78px;
+        }
+        .icing div:nth-child(5){
+            left: 104px;
+        }
+        .icing div:nth-child(6){
+            left: 130px;
+        }
+        .icing div:nth-child(7){
+            left: 156px;
+        }
+        
+        .cherries div{
+            background-color: #f7174c;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            position: absolute;
+            top: -18px;
+        }
+        .cherries div:nth-child(1){
+            left: 8px;
+        }
+
+        .cherries div:nth-child(2){
+            left: 40px;
+        }
+        .cherries div:nth-child(3){
+            left: 70px;
+        }
+        .cherries div:nth-child(4){
+            left: 100px;
+        }
+        .cherries div:nth-child(5){
+            left: 130px;
+        }
+        .cherries div:nth-child(6){
+            left: 156px;
+        }
+        .c2{
+            transform: scale(0.8);
+            bottom: 62px;
+            left: 60px;
+            z-index: -1;
+        }
+        .c3{
+            transform: scale(0.6);
+            bottom: 110px;
+            left: 60px;
+            z-index: -2;
+        }
+        .candle{
+            background-color: #f8f8f8;
+            height: 70px;
+            width: 20px;
+            position: absolute;
+            z-index: -3;
+            bottom: 60px;
+            left: 80px;
+        }
+        .flame{
+            background-color: #fbb200;
+            height: 22px;
+            width: 22px;
+            border-radius: 0 50% 50% 50%;
+            position: absolute;
+            top: -23px;
+            transform: rotate(45deg);
+            animation: flameAnim 1s infinite;
+        }
+
+        @keyframes flameAnim {
+            33%{
+                transform: rotate(0deg);
+            }
+            66%{
+                transform: rotate(90deg);
+                
+            }
+        }
+
+        .balon{
+            width: 100%;
+            /* background: #9fffff; */
+            margin:0 auto;
+            /* padding-top: 30px; */
+            position: relative;
+        }
+        .balon div{
+            width: 60px;
+            height: 90px;
+            background: rgba(182, 15, 97, 0.8);
+            border-radius: 0;
+            border-radius: 80% 80% 80% 80%;
+            margin: 0 auto;
+            position: absolute;
+            padding: 10px;
+        }
+        .balon div:nth-child(1){
+            background-color: rgba(182, 15, 97, 0.8);
+            left: 0;
+            box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.8);
+            animation: balon1 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(1)::before{
+            color: rgba(182, 15, 97, 0.8);
+        }
+        .balon div:nth-child(2){
+            background-color: rgba(242, 112, 45, 0.8);
+            left: 70px;
+            box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.8);
+            animation: balon2 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(2)::before{
+            color: rgba(242, 112, 45, 0.8);
+        }
+        .balon div:nth-child(3){
+            background-color: rgba(45, 181, 167, 0.8);
+            left: 140px;
+            box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.8);
+            animation: balon4 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(3)::before{
+            color: rgba(45, 181, 167, 0.8);
+        }
+        .balon div:nth-child(4){
+            background-color: rgba(190, 61, 244, 0.8);
+            left: 50px;
+            top: 80px;
+            box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.8);
+            animation: balon3 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(4)::before{
+            color: rgba(190, 61, 244, 0.8);
+        }
+        .balon div:nth-child(5){
+            background-color: rgba(180, 224, 67, 0.8);
+            left: 100px;
+            top: 90px;
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.8);
+            animation: balon1 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(5)::before{
+            color: rgba(180, 224, 67, 0.8);
+        }
+        .balon div:nth-child(6){
+            background-color: rgba(242, 194, 58, 0.8);
+            left: 170px;
+            top: 80px;
+            box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.8);
+            animation: balon2 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(6)::before{
+            color: rgba(242, 194, 58, 0.8);
+        }
+        .balon div:nth-child(7){
+            background-color: rgba(242, 112, 45, 0.8);
+            left: 240px;
+            top: 80px;
+            box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.8);
+            animation: balon3 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(7)::before{
+            color: rgba(242, 112, 45, 0.8);
+        }
+        .balon div:nth-child(8){
+            background-color: rgba(45, 181, 167, 0.8);
+            left: 310px;
+            top: 80px;
+            box-shadow: inset 10px 10px 10px rgba(35, 140, 129, 0.8);
+            animation: balon4 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(8)::before{
+            color: rgba(45, 181, 167, 0.8);
+        }
+        .balon div:nth-child(9){
+            background-color: rgba(182, 15, 97, 0.8);
+            left: 150px;
+            z-index: -1;
+            top: 170px;
+            box-shadow: inset 10px 10px 10px rgba(135, 11, 72, 0.8);
+            animation: balon1 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(9)::before{
+            color: rgba(182, 15, 97, 0.8);
+        }
+        .balon div:nth-child(10){
+            background-color: rgba(180, 224, 67, 0.8);
+            left: 200px;
+            top: 180px;
+            z-index: -1;
+            box-shadow: inset 10px 10px 10px rgba(158, 206, 34, 0.8);
+            animation: balon1 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(10)::before{
+            color: rgba(180, 224, 67, 0.8);
+        }
+        .balon div:nth-child(11){
+            background-color: rgba(242, 194, 58, 0.8);
+            left: 240px;
+            top: 180px;
+            z-index: -1;
+            box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.8);
+            animation: balon4 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(11)::before{
+            color: rgba(242, 194, 58, 0.8);
+        }
+        .balon div:nth-child(12){
+            background-color: rgba(190, 61, 244, 0.8);
+            left: 290px;
+            top: 180px;
+            z-index: -1;
+            box-shadow: inset 10px 10px 10px rgba(173, 14, 240, 0.8);
+            animation: balon3 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(12)::before{
+            color: rgba(190, 61, 244, 0.8);
+        }
+        .balon div:nth-child(13){
+            background-color: rgba(242, 112, 45, 0.8);
+            left: 340px;
+            top: 180px;
+            z-index: -1;
+            box-shadow: inset 10px 10px 10px rgba(222, 85, 14, 0.8);
+            animation: balon2 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(13)::before{
+            color: rgba(242, 112, 45, 0.8);
+        }
+        .balon div:nth-child(14){
+            background-color: rgba(242, 194, 58, 0.8);
+            left: 380px;
+            top: 180px;
+            box-shadow: inset 10px 10px 10px rgba(234, 177, 15, 0.8);
+            animation: balon2 6s ease-in-out infinite;
+        }
+        .balon div:nth-child(14)::before{
+            color: rgba(242, 194, 58, 0.8);
+        }
+        .balon div::before{
+            color: rgba(182, 15, 97, 0.8);
+            position: absolute;
+            bottom: -11px;
+            content:"▴";
+            left: 36px;
+            font-size: 1em;
+        }
+        .balon div span{
+            font-size: 4.8em;
+            color: white;
+            position: relative;
+            top: -10px;
+            left: 5px;
+        }
+
+        @keyframes balon1 {
+            0%,100%{
+                transform: translateY(0) rotate(-6deg);
+            }
+            50%{
+                transform: translateY(-20px) rotate(8deg);
+            }
+        }
+        @keyframes balon2 {
+            0%,100%{
+                transform: translateY(0) rotate(6deg);
+            }
+            50%{
+                transform: translateY(-20px) rotate(-8deg);
+            }
+        }
+        @keyframes balon3 {
+            0%,100%{
+                transform: translate(0, -10px) rotate(6deg);
+            }
+            50%{
+                transform: translate(-20px,10px) rotate(-8deg);
+            }
+        }
+        @keyframes balon4 {
+            0%,100%{
+                transform: translate(10px, -10px) rotate(-8deg);
+            }
+            50%{
+                transform: translate(-15px,10px) rotate(10deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <audio autoplay loop id="audio2">
+        <source src="Happy-birthday-instrumental.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        // alert('\n\nSelamat Ulang tahun🥳🥳🎂🥳.Semoga panjang umur, sehat selalu dan cita-citanya tercapai. \n\nNote: \n* MARAH NYA KURANGIN😑');
+
+        const audio = document.getElementById("audio2");
+        document.addEventListener("click",function(){
+            // audio.play();
+            window.location.href='../book.html'
+        })
+    </script>
+    <div class="container">
+        <div class="cake-container">
+            <div class="cake c1">
+                <div class="cream"></div>
+                <div class="icing">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="cherries">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="cake c2">
+                <div class="cream"></div>
+                <div class="icing">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="cherries">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="cake c3">
+                <div class="cream"></div>
+                <div class="icing">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="cherries">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+            </div>
+        </div>
+        <div class="balon">
+            <div><span>H</span></div>
+            <div><span>B</span></div>
+            <div><span>D</span></div>
+            <div><span>A</span></div>
+            <div><span>J</span></div>
+            <div><span>E</span></div>
+            <div><span>N</span></div>
+            <div><span>G</span></div>
+            <div><span>k</span></div>
+            <div><span>e</span></div>
+            <div><span>-</span></div>
+            <div><span>18</span></div>
+            <div><span>t</span></div>
+            <div><span>h</span></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
